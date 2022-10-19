@@ -1,0 +1,61 @@
+*, *::before, *::after {box-sizing: border-box;}
+
+html,body{
+    margin: 0;
+    height: 100%;
+}
+
+body {
+    background-color: #1e1f23;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* Icons */
+.social-icons 
+{
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+.social-icons li
+{
+    margin: 0 10px;
+}
+.social-icons li a 
+{
+    font-size: 35px;
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: white;
+    position: relative;
+    transition: 0.5s ease;
+}
+/* Color and animation */
+.social-icons li a:hover {
+    background-image: linear-gradient(230deg, #3fff7c, #3ffbe0);
+    background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    font-size: 46px;
+}
+.social-icons li a::before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    background: linear-gradient(230deg, #3fff7c, #3ffbe0);
+    transform: scale(1);
+    transition: 0.5s ease-in-out;
+}
+.social-icons li a:hover::before {
+    transform: scale(0);
+}
